@@ -1,4 +1,4 @@
-export interface Record {
+export interface ClientRecord {
   id: string;
   name: string;
   phone: string;

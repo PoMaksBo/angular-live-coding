@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {Record} from '../../../interfaces/record';
+import {ClientRecord} from '../../../interfaces/clientRecord';
 
 @Component({
   selector: 'app-list-item',
@@ -9,7 +9,7 @@ import {Record} from '../../../interfaces/record';
 })
 export class ListItemComponent implements OnInit {
 
-  @Input() record!: Record;
+  @Input() record!: ClientRecord;
 
   constructor() { }
 
