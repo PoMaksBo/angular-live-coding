@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {CLIENTS} from '../data/clients';
-import {filter, map, Observable, of} from 'rxjs';
+import {filter, map, Observable, of, tap} from 'rxjs';
 import {CONTACTS} from '../data/contacts';
 import {Contact} from '../interfaces/contacts';
 import {Account} from '../interfaces/accounts';
@@ -15,11 +15,14 @@ export class ClientService {
   constructor() {}
 
   list(): Observable<Client[]> {
-    return of(CLIENTS);
+    return of(CLIENTS).pipe(
+      tap(() => console.log('list')),
+    );
   }
 
   getContact(clientId: string): Observable<Contact> {
     return of(CONTACTS).pipe(
+      tap(() => console.log('getContact', clientId)),
       map(contacts => contacts.find(({userId}) => userId === clientId)),
       filter((contact): contact is Contact => !!contact)
     );
@@ -27,6 +30,7 @@ export class ClientService {
 
   getAccounts(clientIds: string[]): Observable<Account[]> {
     return of(ACCOUNTS).pipe(
+      tap(() => console.log('getAccounts', clientIds)),
       map(accounts => accounts.filter(({userId}) => clientIds.includes(userId)))
     );
   }
