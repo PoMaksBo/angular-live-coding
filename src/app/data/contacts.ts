@@ -1,4 +1,4 @@
-import {Contact} from '../interfaces/contacts';
+import { Contact } from '../interfaces/interfaces';
 
 export const CONTACTS: Contact[] = [
   {

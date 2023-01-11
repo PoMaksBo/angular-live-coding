@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {ClientRecord} from '../../../interfaces/clientRecord';
+import { ClientRecord } from '../../../interfaces/interfaces';
 
 @Component({
   selector: 'app-list-item',
