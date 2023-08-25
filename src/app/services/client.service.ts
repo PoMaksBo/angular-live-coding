@@ -2,10 +2,8 @@ import {Injectable} from '@angular/core';
 import {CLIENTS} from '../data/clients';
 import {filter, map, Observable, of, tap} from 'rxjs';
 import {CONTACTS} from '../data/contacts';
-import {Contact} from '../interfaces/contacts';
-import {Account} from '../interfaces/accounts';
 import {ACCOUNTS} from '../data/accounts';
-import {Client} from '../interfaces/clients';
+import { Account, Client, Contact } from '../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
