@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { ClientRecord } from '../../../interfaces/interfaces';
 
 @Component({
@@ -7,13 +7,8 @@ import { ClientRecord } from '../../../interfaces/interfaces';
   styleUrls: ['./list-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ListItemComponent implements OnInit {
+export class ListItemComponent {
 
-  @Input() record!: ClientRecord;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  @Input({required: true}) record!: ClientRecord;
 
 }
