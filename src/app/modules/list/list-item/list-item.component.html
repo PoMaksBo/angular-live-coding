@@ -1,5 +1,13 @@
-<div>{{record.name}}</div>
-<div>{{record.phone}}</div>
-<div>{{record.email}}</div>
-<div>{{record.address}}</div>
-<div>{{record.currency}}</div>
+<div class="list-item">
+    <h2 class="list-item__name">{{record.name}}</h2>
+    <div class="list-item__info">
+        <div class="info__text">{{record.currency}}</div>
+        <span class="border">|</span>
+        <div class="info__text">{{record.email}}</div>
+        <span class="border">|</span>
+        <div class="info__text">{{record.phone}}</div>
+        <span class="border">|</span>
+        <div class="info__text">{{record.address}}</div>
+    </div>    
+</div>
+<div class="botton-border"></div>
